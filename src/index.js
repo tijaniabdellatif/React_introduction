@@ -1,17 +1,38 @@
+//EN Javascript (ES6)
 import React from 'react';
-import ReactDOM from 'react-dom';
+import  ReactDOM  from 'react-dom';
+import  Books  from './components/Books';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Heading = (props) => {
+  
+
+    return(<h1 className="font-mono text-3xl text-center text-red-800">
+     
+       {props.title}
+            
+    </h1>);
+}
+
+
+
+function BookList()
+{
+
+     return(
+      
+         <>
+                <section className="container mx-auto my-12 px-4">
+
+                      <Heading title="BookList" />
+                      <Books />
+
+                </section>
+         </>
+
+     );
+}
+
+
+ReactDOM.render(<BookList />,document.getElementById('root'));
