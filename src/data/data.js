@@ -16,6 +16,7 @@ export const dataBook = [
             title:"Marxism",
             author:"Mark",
             date:dataString,
+            price : 120,
             authorImg : 'https://picsum.photos/32/32/?random',
             urlImg : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
     },
@@ -23,6 +24,7 @@ export const dataBook = [
         id:2,
         title:"Title 2",
         author:"Jean",
+        price:150,
         date:dataString,
         authorImg : 'https://picsum.photos/32/32/?random',
         urlImg : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
@@ -33,6 +35,7 @@ export const dataBook = [
         id:3,
         title:"Title 3",
         author:"Janne",
+        price : 150,
         date:dataString,
         authorImg : 'https://picsum.photos/32/32/?random',
         urlImg : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'

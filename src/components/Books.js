@@ -14,7 +14,7 @@ const Books = () => {
              dataBook.map((book) => {
                   
                return(<h1>
-                    <Card />
+                    <Card book={book} key={book.id} />
                </h1>)
 
              })

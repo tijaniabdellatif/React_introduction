@@ -9,7 +9,6 @@ const Heading = (props) => {
   
 
     return(<h1 className="font-mono text-3xl text-center text-red-800">
-     
        {props.title}
             
     </h1>);
