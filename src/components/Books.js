@@ -3,7 +3,7 @@ import {Card} from "./Card";
 import { dataBook } from '../data/data';
 
 
-export const Books = () => {
+const Books = () => {
 
     return(
         <article className="flex flex-wrap -mx-1">
@@ -21,3 +21,5 @@ export const Books = () => {
         </article>
     );
 }
+
+export default Books;

@@ -18,7 +18,7 @@ export const dataBook = [
             date:dataString,
             price : 120,
             authorImg : 'https://picsum.photos/32/32/?random',
-            urlImg : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
+            url : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
     },
     {
         id:2,
@@ -27,7 +27,7 @@ export const dataBook = [
         price:150,
         date:dataString,
         authorImg : 'https://picsum.photos/32/32/?random',
-        urlImg : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
+        url : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
 
     },
     {
@@ -38,7 +38,7 @@ export const dataBook = [
         price : 150,
         date:dataString,
         authorImg : 'https://picsum.photos/32/32/?random',
-        urlImg : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
+        url : 'https://images-na.ssl-images-amazon.com/images/I/51gGgVnODsL._SX322_BO1,204,203,200_.jpg'
 
     },
     
