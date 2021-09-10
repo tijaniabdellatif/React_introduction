@@ -1,14 +1,61 @@
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart,faHeart } from "@fortawesome/free-solid-svg-icons";
+
+import Swal from 'sweetalert2';
+import withReactContent  from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
 export const  Card = (props) => {
 
 
     const {title,date,price,author,authorImg,urlImg} = props.book;
     
 
-    function clickHandler()
-    {
-        alert('Clickd');
+     
+    const clickHandler = () => {
+
+        MySwal.fire({
+
+              title:'Are you sure ?',
+              text:'You want to add this item',
+              icon:'warning',
+              confirmButtonText:'Yes,Add this item',
+              showCancelButton:true,
+
+              didOpen: () => {
+                   
+                     Swal.getCancelButton().addEventListener('click', e => {
+                          
+                           MySwal.fire({
+                              
+                            position:'top-end',
+                            icon:"warning",
+                            title:"item not added",
+                            showConfirmButton:false,
+                            timer : 2000
+
+                           });
+
+                     })
+
+              }
+
+        }).then(() => {
+
+                      return MySwal.fire({
+
+                            position:'top-end',
+                            icon:'success',
+                            title:'item added',
+                            showConfirmButton:false,
+                            timer : 2000
+                      })
+
+        });
+ 
     }
 
 
@@ -48,16 +95,10 @@ export const  Card = (props) => {
 
             <a className="no-underline text-gray-darker hover:text-red-dark">
             <span>
-            
+            <Font name={faHeart} />
             </span>
             </a>
-
-            <a className="no-underline text-gray-darker hover:text-red-dark">
-            <span>
-              
-            </span>
-            </a>
-            
+    
         </footer>
 
         <div className="text-center my-7">
@@ -67,9 +108,8 @@ export const  Card = (props) => {
              Add to Cart 
              <span>
 
-                 {/* ICON  
-                   Icon sous format d'un composant qui accept des props
-                 */}
+             <Font name={faShoppingCart} />
+            
                  
              </span>
 
@@ -80,5 +120,14 @@ export const  Card = (props) => {
     </div>
 
 
-    </div>)
+    </div>
+    )
+}
+
+const Font = (props) => {
+
+    return(
+        <FontAwesomeIcon icon={props.name} />
+    );
+
 }
