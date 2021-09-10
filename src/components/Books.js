@@ -1,28 +1,23 @@
 import React from 'react';
+import {Card} from "./Card";
 import { dataBook } from '../data/data';
-import {Card} from './Card'
 
 
+export const Books = () => {
 
-const Books = () => {
+    return(
+        <article className="flex flex-wrap -mx-1">
 
 
-    return(<article className="flex flex-wrap -mx-1">
+           {
+               dataBook.map((book) => {
+                    
+                       return(
+                           <Card key={book.id}  book={book} />
+                       );
+               })
+           }
 
-        
-        {
-             dataBook.map((book) => {
-                  
-               return(<h1>
-                    <Card book={book} key={book.id} />
-               </h1>)
-
-             })
-        }
-
-    </article>)
-
+        </article>
+    );
 }
-
-
-export default Books;
